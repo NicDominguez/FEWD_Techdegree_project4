@@ -1,3 +1,5 @@
+/* Import of _variables.scss */
+
 
 //==========================================================
 //      Color Variables
@@ -43,18 +45,21 @@ $color-border: #58e1c1;
 
 // Font Weights
 
-$font-weight-light:
-$font-weight-regular:
-$font-weight-semibold:
-$font-weight-bold:
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
 
 // Font Stack Variables
 
-$font-stack-headline:
-$font-stack-paragraph:
-$font-stack-anchor:
-$font-stack-button:
-$font-stack-input:
+$font-stack-headline-secondary: 'Helvetica Neue Light', sans-serif;
+$font-stack-headline-primary: 'Helvetica Neue Bold', sans-serif;
+$font-stack-paragraph: 'Helvetica 55 Roman', sans-serif;
+$font-stack-link: 'Helvetica Neue Medium', sans-serif;
+$font-stack-italic: 'Helvetica Neue Italic', sans-serif;
+$font-stack-blockquote: 'Helvetica Neue Italic', sans-serif;
+$font-stack-button: 'Helvetica Neue Medium', sans-serif;
+$font-stack-input: 'Helvetica Neue Medium', sans-serif;
 
 
 //==========================================================

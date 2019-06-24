@@ -1,6 +1,75 @@
-/*     Typography:
-    .container
-    .link
-    .blockquote
-    .headline--primary
-    .headline--secondary */
+
+/* Import of _typography.scss */
+
+//==========================================================
+//      Loading Font-facees
+//==========================================================
+
+
+@font-face {
+font-family: 'Helvetica Neue Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica Neue Italic'), url('/fonts/HelveticaNeueItalic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Helvetica 55 Roman';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica 55 Roman'), url('/fonts/HelveticaNeue-Roman.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Helvetica Neue Light';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica Neue Light'), url('/fonts/HelveticaNeueLight.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Helvetica Neue Medium';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica Neue Medium'), url('/fonts/HelveticaNeueMedium.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Helvetica Neue Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica Neue Bold'), url('/fonts/HelveticaNeueBold.woff') format('woff');
+}
+
+//==========================================================
+//      Typography Styles
+//==========================================================
+
+
+.container {        
+    font-family: $font-stack-paragraph;
+    font-weight: $font-weight-regular;
+    color: $color-font-base;
+}
+
+.link {
+    font-family: $font-stack-link;
+    font-weight: $font-weight-semibold;
+    color: $color-font-link;
+}
+
+.blockquote {
+    font-family: $font-stack-blockquote;
+    font-weight: $font-weight-bold;
+    color: $color-font-base;
+}
+.headline--primary {
+    font-family: $font-stack-headline-primary;
+    font-weight: $font-weight-bold;
+    color: $color-font-headline;
+}
+.headline--secondary {
+    font-family: $font-stack-headline-secondary;
+    font-weight: $font-weight-light;
+    color: color-font-base;
+}

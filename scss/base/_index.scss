@@ -1,9 +1,10 @@
-// **************************************
-// base/_index.scss
-// used to import individual components
-// **************************************
+/* Import of /base/_index.scss */
+
+//==========================================================
+//      Import of Base Partials
+//==========================================================
 
 
 @import 'normalize';
-@import 'base'
+@import 'base';
 

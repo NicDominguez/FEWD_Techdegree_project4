@@ -1,13 +1,12 @@
-// **************************************
-// index.scss
-// Main Sass file used to import partials
-// **************************************
+//==========================================================
+//      Main Sass Import of Partials
+//==========================================================
 
 
 // NOTE: import utilities and base partials here:
 
-@import 'base/index';
 @import 'utilities/index';
+@import 'base/index';
 
 // import components partials
 
