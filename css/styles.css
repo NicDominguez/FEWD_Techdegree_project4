@@ -1,8 +1,4 @@
-/* Import of /utilities/_index.scss */
-/* Import of _variables.scss */
-/* Import of _placeholders.scss */
-/* Import of _mixins.scss */
-/* Import of _functions.scss */
+/* @import 'utilities/index'; */
 /* Import of /base/_index.scss */
 /* Import of normalize.scss */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -344,13 +340,28 @@ template {
   display: none;
 }
 
-/* Import of _base.scss */
-/* Import of /componenents/_index.scss */
-/* Import of _grids.scss */
+/* @import 'base'; */
+/* @import 'components/index'; */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.5em;
+}
+
 .grid__row {
-  padding: 1em 10px;
+  padding: 2em 40px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .grid__row {
@@ -484,107 +495,178 @@ template {
   }
 }
 
-/*     Grid:
-    .container
-    .grid__row
-    .grid__col--1
-    .grid__col--2
-    .grid__col--3
-    .grid__col--4
-    .grid__col--5
-    .grid__col--6
-    .grid__col--7
-    .grid__col--8
-    .grid__col--9
-    .grid__col--10
-    .grid__col--11
-    .grid__col--12
-    .card
-    .centered
-    .theme__colors
-    (.grid__col--1, .grid__col--2, .grid__col--10, and .grid__col--11 are not used here in the HTML but would be good to include in the Sass) */
-/* Import of _typography.scss */
-@font-face {
-  font-family: "Helvetica Neue Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica Neue Italic"), url("/fonts/HelveticaNeueItalic.woff") format("woff");
-}
-@font-face {
-  font-family: "Helvetica 55 Roman";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica 55 Roman"), url("/fonts/HelveticaNeue-Roman.woff") format("woff");
-}
-@font-face {
-  font-family: "Helvetica Neue Light";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica Neue Light"), url("/fonts/HelveticaNeueLight.woff") format("woff");
-}
-@font-face {
-  font-family: "Helvetica Neue Medium";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica Neue Medium"), url("/fonts/HelveticaNeueMedium.woff") format("woff");
-}
-@font-face {
-  font-family: "Helvetica Neue Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica Neue Bold"), url("/fonts/HelveticaNeueBold.woff") format("woff");
-}
 .container {
-  font-family: "Helvetica 55 Roman", sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   color: #818181;
 }
 
 .link {
-  font-family: "Helvetica Neue Medium", sans-serif;
-  font-weight: 500;
+  font-family: sans-serif;
+  font-weight: 600;
   color: #54defc;
+  text-decoration: none;
 }
 
 .blockquote {
-  font-family: "Helvetica Neue Italic", sans-serif;
-  font-weight: 700;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.65em;
   color: #818181;
+  border-left: 10px solid #58e1c1;
+  border-radius: 4px;
+  padding: 0 15px;
+  max-width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .headline--primary {
-  font-family: "Helvetica Neue Bold", sans-serif;
+  font-family: sans-serif;
   font-weight: 700;
   color: #58e1c1;
+  margin-left: 20px;
+  max-width: 70%;
 }
 
 .headline--secondary {
-  font-family: "Helvetica Neue Light", sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
-  color: color-font-base;
+  color: #818181;
 }
 
-/* Import of _images.scss */
-/*     Image:
-    .img--logo
-    .img--frame
-    .img--avatar */
-/* Import of _navigation.scss */
-/*     Navigation:
-    .nav
-    .nav__item */
-/* Import of _buttons.scss */
-/*     Buttons:
-    .btn--default
-    .btn--success
-    .btn--error
-    .btn--warning
-    .btn--info
-    .theme__colors */
-/* Import of _forms.scss */
-/*     Forms:
-    .form
-    .form__label--hidden
-    .form__input */
+#images, #buttons, #grid {
+  margin-left: 40px;
+}
+
+.nav {
+  margin-bottom: 30px;
+}
+
+.nav__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.nav__item a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #818181;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+.nav__item a:hover {
+  background-color: #58e1c1;
+  border-radius: 5px;
+  color: white;
+}
+
+.img--logo {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+.img--frame {
+  padding: 15px;
+  border: 1px solid #818181;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.img--avatar {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.btn--default {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 0;
+  background-color: #51ddfc;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn--success {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 0;
+  background-color: #63cc82;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn--error {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 0;
+  background-color: #e4757a;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn--warning {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 0;
+  background-color: #fd7856;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn--info {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 0;
+  background-color: #927bc1;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.form__label--hidden {
+  display: none;
+}
+
+.form__input {
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-bottom: 10px solid #58e1c1;
+  text-indent: 15px;
+}
+.form__input::placeholder {
+  font-weight: 600;
+}
 
 /*# sourceMappingURL=styles.css.map */

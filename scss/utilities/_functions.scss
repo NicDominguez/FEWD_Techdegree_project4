@@ -1,1 +1,6 @@
 /* Import of _functions.scss */
+
+
+@function px-to-pc($target, $context) {
+    @return ($target / $context) * 100%;
+}

@@ -1,1 +1,21 @@
 /* Import of _placeholders.scss */
+
+//==========================================================
+//      Button Placeholders
+//==========================================================
+
+%button {
+    width: 100%;
+    border-radius: $button-border-radius;
+    border: none;
+    padding: $button-padding;
+}
+
+//==========================================================
+//      Layout Placeholders
+//==========================================================
+
+%x-center {
+    margin-left: auto;
+    margin-right: auto;
+}

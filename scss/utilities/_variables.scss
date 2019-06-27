@@ -7,11 +7,11 @@
 
 // Button Color Variables
 
-$color-btn-default: #51ddfc;
-$color-btn-success: #63cc82;
-$color-btn-error: #e4757a;
-$color-btn-warning: #fd7856;
-$color-btn-info: #927bc1;
+$color-btn--default: #51ddfc;
+$color-btn--success: #63cc82;
+$color-btn--error: #e4757a;
+$color-btn--warning: #fd7856;
+$color-btn--info: #927bc1;
 
 // Navigation Color Variables
 
@@ -50,6 +50,10 @@ $font-weight-regular: 400;
 $font-weight-semibold: 500;
 $font-weight-bold: 700;
 
+// Font size
+
+$font-size-large: 1.6em;
+
 // Font Stack Variables
 
 $font-stack-headline-secondary: 'Helvetica Neue Light', sans-serif;
@@ -61,6 +65,10 @@ $font-stack-blockquote: 'Helvetica Neue Italic', sans-serif;
 $font-stack-button: 'Helvetica Neue Medium', sans-serif;
 $font-stack-input: 'Helvetica Neue Medium', sans-serif;
 
+// Font Style Variables
+
+$font-style-italic: italic;
+
 
 //==========================================================
 //      Media Query & Breakpoint Variables
@@ -70,3 +78,23 @@ $font-stack-input: 'Helvetica Neue Medium', sans-serif;
 
 $break-desktop: 1400px;
 $break-mobile: 480px;
+
+
+//==========================================================
+//      Layout Variables
+//==========================================================
+
+
+$button-padding: 2% 0;
+
+$line-height: 1.5em;
+
+//==========================================================
+//      Border Variables
+//==========================================================
+
+$blockquote-border-width: 10px;
+$blockquote-border-style: solid;
+$blockquote-border-radius: 4px;
+
+$button-border-radius: 20px;

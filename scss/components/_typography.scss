@@ -60,8 +60,15 @@ src: local('Helvetica Neue Bold'), url('/fonts/HelveticaNeueBold.woff') format('
 
 .blockquote {
     font-family: $font-stack-blockquote;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-semibold;
+    font-style: $font-style-italic;
+    font-size: $font-size-large;
     color: $color-font-base;
+    border-left: $blockquote-border-width $blockquote-border-style $color-border;
+    border-radius: $blockquote-border-radius;
+    padding: 0 15px;
+    max-width: 80%;
+    
 }
 .headline--primary {
     font-family: $font-stack-headline-primary;

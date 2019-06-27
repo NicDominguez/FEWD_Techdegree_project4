@@ -1,10 +1,25 @@
 /* Import of _buttons.scss */
 
+.btn--default {
+    @extend %button;
+}
 
-/*     Buttons:
-    .btn--default
-    .btn--success
-    .btn--error
-    .btn--warning
-    .btn--info
-    .theme__colors */
+.btn--success {
+    @extend %button;
+}
+
+.btn--error {
+    @extend %button;
+}
+
+.btn--warning {
+    @extend %button;
+}
+
+.btn--info {
+    @extend %button;
+}
+
+.theme__colors {
+    @extend %button;
+}
