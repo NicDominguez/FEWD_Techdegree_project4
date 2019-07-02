@@ -2,43 +2,11 @@
 /* Import of _typography.scss */
 
 //==========================================================
-//      Loading Font-facees
+//      Loading Font-face
 //==========================================================
 
-
-@font-face {
-font-family: 'Helvetica Neue Italic';
-font-style: normal;
-font-weight: normal;
-src: local('Helvetica Neue Italic'), url('/fonts/HelveticaNeueItalic.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Helvetica 55 Roman';
-font-style: normal;
-font-weight: normal;
-src: local('Helvetica 55 Roman'), url('/fonts/HelveticaNeue-Roman.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Helvetica Neue Light';
-font-style: normal;
-font-weight: normal;
-src: local('Helvetica Neue Light'), url('/fonts/HelveticaNeueLight.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Helvetica Neue Medium';
-font-style: normal;
-font-weight: normal;
-src: local('Helvetica Neue Medium'), url('/fonts/HelveticaNeueMedium.woff') format('woff');
-}
-
-@font-face {
-font-family: 'Helvetica Neue Bold';
-font-style: normal;
-font-weight: normal;
-src: local('Helvetica Neue Bold'), url('/fonts/HelveticaNeueBold.woff') format('woff');
+@if variable-exists(font-url--google) {
+    @import url($font-url--google);
 }
 
 //==========================================================
@@ -46,37 +14,36 @@ src: local('Helvetica Neue Bold'), url('/fonts/HelveticaNeueBold.woff') format('
 //==========================================================
 
 
+//Typography Styles
+
 .container {        
-    font-family: $font-stack-paragraph;
-    font-weight: $font-weight-regular;
-    color: $color-font-base;
+    font-family: $font-stack--primary;
+    color: $color-font--base;
 }
 
 .link {
-    font-family: $font-stack-link;
-    font-weight: $font-weight-semibold;
-    color: $color-font-link;
+    font-weight: $font-weight--bold;
+    color: $color-secondary;
 }
 
 .blockquote {
-    font-family: $font-stack-blockquote;
-    font-weight: $font-weight-semibold;
-    font-style: $font-style-italic;
-    font-size: $font-size-large;
-    color: $color-font-base;
-    border-left: $blockquote-border-width $blockquote-border-style $color-border;
-    border-radius: $blockquote-border-radius;
-    padding: 0 15px;
-    max-width: 80%;
-    
+    font-style: italic;
+    font-size: $font-size--blockquote;
+    border-left: $bdr-width--blockquote $bdr-style--blockquote $bdr-color--blockquote;
+    border-radius: $br-btn;
+    padding: $padding-blockquote;
+    max-width: $width-blockquote;
+    margin: $margin-blockquote;
 }
+
 .headline--primary {
-    font-family: $font-stack-headline-primary;
-    font-weight: $font-weight-bold;
-    color: $color-font-headline;
+    font-size: $font-size--headline;
+    color: $color-primary;
+    margin: $margin-headline;
+    max-width: $width-headline;
 }
 .headline--secondary {
-    font-family: $font-stack-headline-secondary;
-    font-weight: $font-weight-light;
-    color: color-font-base;
+    font-weight: $font-weight--light;
+    text-indent: $font-indent;
 }
+

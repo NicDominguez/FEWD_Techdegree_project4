@@ -5,39 +5,35 @@
 //      Color Variables
 //==========================================================
 
-// Button Color Variables
+// Descriptive Color Palatte Variables
+$viking-green   : #58e1c1;
+$malibu-blue    : #54defc;
+$grey           : #797e83;
+$white          : #fff;
 
-$color-btn--default: #51ddfc;
-$color-btn--success: #63cc82;
-$color-btn--error: #e4757a;
-$color-btn--warning: #fd7856;
-$color-btn--info: #927bc1;
+// Functional Color Palatte Variables
 
-// Navigation Color Variables
+$color-primary      : $viking-green;
+$color-secondary    : $malibu-blue;
+$color-font--base   : $grey;
+$color-font--btn    : $white;
 
-$color-nav-focus: #58e1c1;
+// Theme Color Variable Map
 
-// Column Color Variables
-
-$color-grid_col--3: #deb2ee;
-$color-grid_col--4: #7ee6fd;
-$color-grid_col--5: #88d9a0;
-$color-grid_col--6: #3fabca;
-$color-grid_col--7: #ec9fa3;
-$color-grid_col--8: #fd9f85;
-$color-grid_col--12: #80e8d1;
-
-// Font Color Variables
-
-$color-font-base: #818181;
-$color-font-headline: #58e1c1;
-$color-font-link: #54defc;
-$color-font-btn: white;
-
-// Border and Underline Color Variables:
-
-$color-border: #58e1c1;
-
+$theme-colors: (
+     'default': $malibu-blue,
+     'success': #63cc82,
+       'error': #e4757a,
+     'warning': #fd7856,
+        'info': #927bc1,
+ 'grid_col--3': #deb2ee,
+ 'grid_col--4': #7ee6fd,
+ 'grid_col--5': #88d9a0,
+ 'grid_col--6': #3fabca,
+ 'grid_col--7': #ec9fa3,
+ 'grid_col--8': #fd9f85,
+'grid_col--12': #80e8d1,
+);
 
 //==========================================================
 //      Font Stacks Variables
@@ -45,29 +41,36 @@ $color-border: #58e1c1;
 
 // Font Weights
 
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-semibold: 500;
-$font-weight-bold: 700;
+$font-weight--thin      : 100;
+$font-weight--light     : 300;
+$font-weight--medium    : 400;
+$font-weight--bold      : 700;
+$font-weight--ultrabold : 900;
 
 // Font size
 
-$font-size-large: 1.6em;
+$font-size--base       : 16px;
+$font-size--headline   : px-to-em(28px);
+$font-size--blockquote : px-to-em(22px);
+$font-size--input      : px-to-em(14px);
 
 // Font Stack Variables
 
-$font-stack-headline-secondary: 'Helvetica Neue Light', sans-serif;
-$font-stack-headline-primary: 'Helvetica Neue Bold', sans-serif;
-$font-stack-paragraph: 'Helvetica 55 Roman', sans-serif;
-$font-stack-link: 'Helvetica Neue Medium', sans-serif;
-$font-stack-italic: 'Helvetica Neue Italic', sans-serif;
-$font-stack-blockquote: 'Helvetica Neue Italic', sans-serif;
-$font-stack-button: 'Helvetica Neue Medium', sans-serif;
-$font-stack-input: 'Helvetica Neue Medium', sans-serif;
+$font-url--google     : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-stack--primary  : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Font Style Variables
 
-$font-style-italic: italic;
+$font-style--italic: italic;
+
+// Line Height Variables
+
+$font-lh--base   : 1.5em;
+
+//Text Indent Variables
+
+$font-indent   : 10px;
+
 
 
 //==========================================================
@@ -76,25 +79,54 @@ $font-style-italic: italic;
 
 // Breakpoints
 
-$break-desktop: 1400px;
-$break-mobile: 480px;
-
+$break-desktop    : 768px;
 
 //==========================================================
 //      Layout Variables
 //==========================================================
 
+//Width Variables
 
-$button-padding: 2% 0;
+$width-btn        : 410px;
+$width-blockquote : 70%;
+$width-headline   : 85%;
+$width-navit   : 420px;
+$width-input      : 400px;
 
-$line-height: 1.5em;
+//Margin Variables
+
+$margin-btn: 10px 5px;
+$margin-blockquote: 20px 0 50px 20px;
+$margin-headline: 20px 0 20px 20px;
+$margin-img: 20px auto 30px auto;
+$margin-input: 10px;
+
+//Padding Variables
+
+$padding-btn: 15px 0;
+$padding-img: 15px;
+$padding-blockquote: 0 20px;
+$padding-input: 0 0 10px 0;
 
 //==========================================================
 //      Border Variables
 //==========================================================
 
-$blockquote-border-width: 10px;
-$blockquote-border-style: solid;
-$blockquote-border-radius: 4px;
+//Border Width Variables
+$bdr-width--blockquote: 10px;
+$bdr-width--img: 1px;
+$bdr-width--input: 5px;
 
-$button-border-radius: 20px;
+//Border Syle Variables
+$bdr-style--blockquote: solid;
+$bdr-style--img: solid;
+$bdr-style--blockquote: solid;
+$bdr-style--input: solid;
+
+//Border Radius Variables
+$br-blockquote: 4px;
+$br-btn: 5px;
+
+//Border Color Variables
+$bdr-color--img: $color-font-base;
+$bdr-color--blockquote: $color-primary;

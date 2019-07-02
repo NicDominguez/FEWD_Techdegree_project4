@@ -1,1 +1,70 @@
 /* Import of _mixins.scss */
+
+@mixin button($color) {
+    background-color: $color;
+    width: $width-btn;
+    margin: $margin-btn;
+    border-radius: $br-btn;
+    padding: $padding-btn;
+    color: $color-font-btn;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    @include mq(desktop) {
+        width: 17%;
+    }
+}
+
+@mixin form-input() {
+    width: $width-input;
+    padding: $padding-input;
+    margin: $margin-input;
+    border-bottom: $bdr-width--input $bdr-style--input $color-primary;
+    text-indent: $font-indent;
+    &::placeholder {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-input;
+    }
+}
+
+@mixin image($padding: null, $border-width: null, $border-style: null, $border-color: null, $max-width: null) {
+    display: block;
+    margin: $margin-img;
+    padding: $padding;
+    border: $border-width $border-style $border-color;
+    max-width: $max-width;
+}
+
+
+@mixin nav-item(){
+    padding: $padding-btn;
+    color: $color-font--base;
+    text-align: center;
+    width: $width-navit;
+}
+
+@mixin nav-item-hover(){
+    background-color: $color-primary;;
+    border-radius: $br-btn;
+    color: $color-font--btn;
+}
+
+//==========================================================
+//      Media Query Mixins
+//==========================================================
+
+@mixin mq($breakpoint) {
+    @if $breakpoint == desktop {
+        @media (min-width: $break-desktop) { @content;}
+    }
+}
+
+//==========================================================
+//      Flexbox Mixins
+//==========================================================
+
+@mixin flex($display:flex, $direction:row, $wrap: wrap, $justify: center) {
+    display: $display;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+}

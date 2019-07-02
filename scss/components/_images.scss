@@ -1,17 +1,16 @@
 /* Import of _images.scss */
 
-
 .img--logo {
-    //horizontal centered in mobile
+    @include image();
 }
 
 
 .img--frame {
-    //horizontal centered in mobile
-    //thin black solid border in mobile
+    @include image($padding-img, $bdr-width--img, $bdr-style--img, $bdr-color--img, 100%);
 }
 
 
+
 .img--avatar {
-    //horizontal centered in mobile
+    @include image();
 }

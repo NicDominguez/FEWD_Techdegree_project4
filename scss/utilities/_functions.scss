@@ -1,6 +1,11 @@
 /* Import of _functions.scss */
 
 
+
 @function px-to-pc($target, $context) {
     @return ($target / $context) * 100%;
+}
+
+@function px-to-em($target, $context: $font-size--base) {
+    @return ($target / $context) * 1em;
 }

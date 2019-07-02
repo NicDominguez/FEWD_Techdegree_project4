@@ -4,7 +4,7 @@
 //      Import of Utility Partials
 //==========================================================
 
-@import 'variables';
-@import 'placeholders';
-@import 'mixins';
-@import 'functions';
+@import '_functions';
+@import '_variables';
+@import '_mixins';
+@import '_placeholders';

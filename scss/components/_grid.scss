@@ -69,25 +69,62 @@
   }
 }
 
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1100px;
+  @include mq(desktop) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
+.grid__row {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
+.grid__col--1 {}
 
-/*     Grid:
-    .container
-    .grid__row
-    .grid__col--1
-    .grid__col--2
-    .grid__col--3
-    .grid__col--4
-    .grid__col--5
-    .grid__col--6
-    .grid__col--7
-    .grid__col--8
-    .grid__col--9
-    .grid__col--10
-    .grid__col--11
-    .grid__col--12
-    .card
-    .centered
-    .theme__colors
-    (.grid__col--1, .grid__col--2, .grid__col--10, and .grid__col--11 are not used here in the HTML but would be good to include in the Sass) */
+.grid__col--2 {}
+
+.grid__col--3 {
+}
+
+.grid__col--4 {
+}
+
+.grid__col--5 {
+}
+
+.grid__col--6 {
+}
+
+.grid__col--7 {
+}
+
+.grid__col--8 {
+}
+
+.grid__col--9 {}
+
+.grid__col--10 {}
+
+.grid__col--11 {}
+
+.grid__col--12 {
+}
+
+.card {}
+
+.centered {
+  @include mq(desktop) {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+
+.theme__colors {}
+
+/*(.grid__col--1, .grid__col--2, .grid__col--10, and .grid__col--11 are not used here in the HTML but would be good to include in the Sass) */

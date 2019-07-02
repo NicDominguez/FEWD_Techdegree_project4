@@ -1,25 +1,29 @@
 /* Import of _buttons.scss */
 
 .btn--default {
-    @extend %button;
+    @include button(map-get($theme-colors, 'default'));
+    @include mq(desktop) {
+        &[type="submit"] {
+            width: $width-btn;
+        }
+    }
 }
 
 .btn--success {
-    @extend %button;
+    @include button(map-get($theme-colors, 'success'));
 }
 
 .btn--error {
-    @extend %button;
+    @include button(map-get($theme-colors, 'error'));
 }
 
 .btn--warning {
-    @extend %button;
+    @include button(map-get($theme-colors, 'warning'));
 }
 
 .btn--info {
-    @extend %button;
+    @include button(map-get($theme-colors, 'info'));
 }
 
 .theme__colors {
-    @extend %button;
 }

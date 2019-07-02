@@ -1,14 +1,13 @@
 /* Import of _forms.scss */
 
 
-    .form {
+.form {
+}
 
-    }
+.form__label--hidden {
+    display: none;
+}
 
-    .form__label--hidden {
-
-    }
-
-    .form__input {
-        
-    }
+.form__input {
+    @include form-input();
+}

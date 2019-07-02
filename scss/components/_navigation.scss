@@ -1,5 +1,28 @@
 /* Import of _navigation.scss */
 
-/*     Navigation:
-    .nav
-    .nav__item */
+.nav {
+    margin-bottom: 30px;
+    @include mq(desktop) {
+        @include flex($justify: flex-end);
+        margin-top: 20px;
+    }
+}
+
+.nav__item {
+    @extend %flex-row;
+    &:last-of-type  {
+        @include mq(desktop) {
+            margin-right: 50px;
+        }
+    }
+    & a {
+        @include nav-item;
+        @include mq(desktop) {
+            width: 100px;
+        }
+        &:hover {
+            @include nav-item-hover;
+        }
+    }
+
+}
