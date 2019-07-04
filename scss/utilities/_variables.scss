@@ -11,6 +11,18 @@ $malibu-blue    : #54defc;
 $grey           : #797e83;
 $white          : #fff;
 
+$emerald-green      : #63cc82;
+$sunglo-red         : #e4757a;
+$coral-orange       : #fd7856;
+$majesty-purple     : #927bc1;
+$lilac-purple       : #deb2ee;
+$anakiwa-blue       : #7ee6fd;
+$vista-green        : #88d9a0;
+$shakespeare-blue   : #3fabca;
+$sea-pink           : #ec9fa3;
+$tangerine-orange   : #fd9f85;
+$riptide-green      : #80e8d1;
+
 // Functional Color Palatte Variables
 
 $color-primary      : $viking-green;
@@ -20,19 +32,27 @@ $color-font--btn    : $white;
 
 // Theme Color Variable Map
 
-$theme-colors: (
-     'default': $malibu-blue,
-     'success': #63cc82,
-       'error': #e4757a,
-     'warning': #fd7856,
-        'info': #927bc1,
- 'grid_col--3': #deb2ee,
- 'grid_col--4': #7ee6fd,
- 'grid_col--5': #88d9a0,
- 'grid_col--6': #3fabca,
- 'grid_col--7': #ec9fa3,
- 'grid_col--8': #fd9f85,
-'grid_col--12': #80e8d1,
+$button-colors: (
+    'default': $malibu-blue,
+    'success': $emerald-green,
+      'error': $sunglo-red,
+    'warning': $coral-orange,
+       'info': $majesty-purple,
+);
+
+$grid-colors: (
+  grey, //1
+  grey, //2
+  $lilac-purple, //3
+  $anakiwa-blue, //4
+  $vista-green, //5
+  $shakespeare-blue, //6
+  $sea-pink, //7
+  $tangerine-orange, //8
+  grey, //9
+  grey, //10
+  grey, //11
+  $riptide-green, //12
 );
 
 //==========================================================
@@ -51,7 +71,7 @@ $font-weight--ultrabold : 900;
 
 $font-size--base       : 16px;
 $font-size--headline   : px-to-em(28px);
-$font-size--blockquote : px-to-em(22px);
+$font-size--blockquote : px-to-em(24px);
 $font-size--input      : px-to-em(14px);
 
 // Font Stack Variables
@@ -65,7 +85,7 @@ $font-style--italic: italic;
 
 // Line Height Variables
 
-$font-lh--base   : 1.5em;
+$font-lh--base   : px-to-em(24px);
 
 //Text Indent Variables
 
@@ -80,6 +100,7 @@ $font-indent   : 10px;
 // Breakpoints
 
 $break-desktop    : 768px;
+$break-maximum    : 1400px;
 
 //==========================================================
 //      Layout Variables
@@ -87,26 +108,27 @@ $break-desktop    : 768px;
 
 //Width Variables
 
-$width-btn        : 410px;
-$width-blockquote : 70%;
-$width-headline   : 85%;
-$width-navit   : 420px;
-$width-input      : 400px;
+$width-btn        : px-to-pc(390px);
+$width-blockquote : px-to-pc(360px);
+$width-headline   : px-to-pc(320px);
+$width-navit      : px-to-pc(400px);
+$width-input      : px-to-pc(380px);
+$width-gutter     : 10px;
 
 //Margin Variables
 
-$margin-btn: 10px 5px;
-$margin-blockquote: 20px 0 50px 20px;
-$margin-headline: 20px 0 20px 20px;
-$margin-img: 20px auto 30px auto;
-$margin-input: 10px;
+$margin-btn: 5px px-to-pc(6.9px);
+$margin-blockquote: px-to-pc(20px) 0 px-to-pc(20px) px-to-pc(20px);
+$margin-headline: px-to-pc(20px) 0 px-to-pc(20px) px-to-pc(20px);
+$margin-img: 10px auto 20px auto;
+$margin-input: px-to-pc(10px);
 
 //Padding Variables
 
-$padding-btn: 15px 0;
-$padding-img: 15px;
-$padding-blockquote: 0 20px;
-$padding-input: 0 0 10px 0;
+$padding-btn: 12px 0;
+$padding-img:  px-to-pc(15px);
+$padding-blockquote: 0 px-to-pc(20px);
+$padding-input: 0 0 px-to-pc(10px) 0;
 
 //==========================================================
 //      Border Variables
@@ -124,9 +146,9 @@ $bdr-style--blockquote: solid;
 $bdr-style--input: solid;
 
 //Border Radius Variables
-$br-blockquote: 4px;
+$br-blockquote: 5px;
 $br-btn: 5px;
 
 //Border Color Variables
-$bdr-color--img: $color-font-base;
+$bdr-color--img: $grey;
 $bdr-color--blockquote: $color-primary;

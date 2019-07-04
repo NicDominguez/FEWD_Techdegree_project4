@@ -9,5 +9,5 @@
 }
 
 .form__input {
-    @include form-input();
+    @extend %form-input;
 }

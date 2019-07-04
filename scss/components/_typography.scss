@@ -17,33 +17,21 @@
 //Typography Styles
 
 .container {        
-    font-family: $font-stack--primary;
-    color: $color-font--base;
+    @extend %container;
 }
 
 .link {
-    font-weight: $font-weight--bold;
-    color: $color-secondary;
+    @extend %links;
 }
 
 .blockquote {
-    font-style: italic;
-    font-size: $font-size--blockquote;
-    border-left: $bdr-width--blockquote $bdr-style--blockquote $bdr-color--blockquote;
-    border-radius: $br-btn;
-    padding: $padding-blockquote;
-    max-width: $width-blockquote;
-    margin: $margin-blockquote;
+    @extend %blockquote;
 }
 
 .headline--primary {
-    font-size: $font-size--headline;
-    color: $color-primary;
-    margin: $margin-headline;
-    max-width: $width-headline;
+    @extend %headline--primary;
 }
 .headline--secondary {
-    font-weight: $font-weight--light;
-    text-indent: $font-indent;
+    @extend %headline--secondary
 }
 

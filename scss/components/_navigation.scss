@@ -2,27 +2,27 @@
 
 .nav {
     margin-bottom: 30px;
+    @include flex($direction: column, $wrap: nowrap);
     @include mq(desktop) {
-        @include flex($justify: flex-end);
-        margin-top: 20px;
+        @include flex($wrap: nowrap, $justify: center);
+        margin-top: px-to-pc(20px); 
     }
 }
 
 .nav__item {
-    @extend %flex-row;
-    &:last-of-type  {
-        @include mq(desktop) {
-            margin-right: 50px;
+    @include flex();
+    &:first-of-type {
+        @include mq(desktop){
+            margin-right: 25px;
         }
-    }
+    };
     & a {
-        @include nav-item;
+        @extend %nav-item;
         @include mq(desktop) {
-            width: 100px;
+            width: 90px;
         }
         &:hover {
-            @include nav-item-hover;
+            @extend %nav-item-hover;
         }
     }
-
 }

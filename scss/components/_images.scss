@@ -1,16 +1,21 @@
 /* Import of _images.scss */
 
 .img--logo {
-    @include image();
+    @extend %image;
+    @include mq(desktop) {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 
 .img--frame {
-    @include image($padding-img, $bdr-width--img, $bdr-style--img, $bdr-color--img, 100%);
+    @extend %image;
+    border: $bdr-width--img $bdr-style--img $bdr-color--img;
 }
 
 
 
 .img--avatar {
-    @include image();
+    @extend %image;
 }

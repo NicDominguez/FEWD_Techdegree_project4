@@ -11,22 +11,21 @@
 
 // grid base class
 .grid {
-
+  
   // .grid__row
   &__row {
     padding: 1em 10px;
-    display: flex;
-    flex-direction: column;
+    @include flex($direction: column);
 
     // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
+    @include mq(desktop) {
       flex-direction: row;
+      flex-wrap: nowrap;
     }
   }
 
   // .grid__col
   &__col {
-
     // create grid columns dynamically
     // loop through each column size
     @for $i from 1 through 12 {
@@ -38,14 +37,13 @@
         // base styles applied to all grid columns 
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
-        margin-top: 10px;
-        flex-basis: 100%;
+        @extend %grid__col;
 
         // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
+        @include mq(desktop) {
 
           // base stlyes applied to all grid columns
-          margin-top: 0;
+          
 
           // make column width a percentage of the column number / total columns
           flex-basis: #{$i / 12 * 100 + "%"} ;
@@ -61,61 +59,23 @@
   & + & {
 
     // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
+    @include mq(desktop) {
 
       // add grid gutter
-      margin-left: 10px;
+      margin-left: $width-gutter;
     }
   }
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1100px;
-  @include mq(desktop) {
+  padding-left: px-to-pc(40px);
+  padding-right: px-to-pc(40px);
+  max-width: $break-maximum;
+  @include mq(maximum) {
     margin-right: auto;
     margin-left: auto;
   }
 }
-
-.grid__row {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.grid__col--1 {}
-
-.grid__col--2 {}
-
-.grid__col--3 {
-}
-
-.grid__col--4 {
-}
-
-.grid__col--5 {
-}
-
-.grid__col--6 {
-}
-
-.grid__col--7 {
-}
-
-.grid__col--8 {
-}
-
-.grid__col--9 {}
-
-.grid__col--10 {}
-
-.grid__col--11 {}
-
-.grid__col--12 {
-}
-
-.card {}
 
 .centered {
   @include mq(desktop) {
@@ -125,6 +85,16 @@
   }
 }
 
-.theme__colors {}
+.theme__colors{
+  &.grid__col  {
+    @each $color in $grid-colors {
+      $i: index($grid-colors, $color); 
+      &--#{$i} {
+        background-color: $color;
+        font-weight: $font-weight--bold;
+      }
+    }
+  }
+}
 
 /*(.grid__col--1, .grid__col--2, .grid__col--10, and .grid__col--11 are not used here in the HTML but would be good to include in the Sass) */
